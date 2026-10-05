@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fraud Investigation Copilot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle" title="Toggle sidebar">&#9776;</button>
+      <div class="brand">Fraud Investigation Copilot</div>
+    </div>
+    <div class="topbar-sub">synthetic data · investigator: investigator1</div>
+  </header>
+
+  <div class="app-shell">
+    <nav class="sidebar" id="sidebar">
+      <button class="nav-link active" data-nav="dashboard">Dashboard</button>
+      <button class="nav-link" data-nav="cases">Cases</button>
+      <button class="nav-link nav-link-disabled" disabled title="Coming soon">Alerts</button>
+      <button class="nav-link nav-link-disabled" disabled title="Coming soon">Customers</button>
+      <button class="nav-link nav-link-disabled" disabled title="Coming soon">Evidence</button>
+      <button class="nav-link nav-link-disabled" disabled title="Coming soon">Reports</button>
+      <button class="nav-link nav-link-disabled" disabled title="Coming soon">Settings</button>
+    </nav>
+
+    <main id="app">
+      <section id="dashboard-view">
+        <h1>Investigation Overview</h1>
+        <div class="stat-cards" id="stat-cards"></div>
+        <h2 class="dashboard-subheading">Recent Cases</h2>
+        <table id="recent-cases-table">
+          <thead>
+            <tr><th>Priority</th><th>Case</th><th>Customer</th><th>Amount</th><th>Scenario</th><th>Status</th></tr>
+          </thead>
+          <tbody id="recent-cases-body"></tbody>
+        </table>
+      </section>
+
+      <section id="queue-view" class="hidden">
+        <h1>Case Queue</h1>
+        <table id="queue-table">
+          <thead>
+            <tr>
+              <th>Priority</th><th>Case</th><th>Customer</th><th>Amount</th>
+              <th>Scenario</th><th>SLA</th><th>Status</th><th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="queue-body"></tbody>
+        </table>
+      </section>
+
+      <section id="case-view" class="hidden">
+        <button id="back-btn">&larr; Back to queue</button>
+        <div class="case-screen" id="case-screen"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

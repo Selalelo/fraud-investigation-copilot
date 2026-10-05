@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Demo/generated output
+demo_output/
+
+# Vendored third-party repos (cloned locally, not part of this project's own source)
+third_party/
+
+# Java/Maven build artifacts (if ever built outside third_party/)
+target/
+*.class
+
+# Local TBT artifacts
+.claude/
+
+# Test and Terraform build artifacts
+.pytest_cache/
+.terraform/
+.build/
+*.tfstate
+*.tfstate.*
+tfplan
+
+
+# Local TBT approval marker
+/.claudestateapproved_plan
